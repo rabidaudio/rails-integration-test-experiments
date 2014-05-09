@@ -19,22 +19,6 @@ Issues
 -   can require an excessive amount of developer time
 
 Separation of concerns should not be violated. This makes testing interactions between units difficult.
-Making mocks and stubs:
-- allows tests with things that aren't built yet
-- forces good design practices (less interdependancy)
-- fast
-
-BUT it isn't an accurate model of how things work
-
-Fixes:
-Contract & collaboration tests- test boundaries as well
-rspec-fire - make sure real method exists for mocks
-static typing - mock is subclass of real class with methods nulled so it throws typeerrors
-
-One elegant solution:
-https://www.destroyallsoftware.com/talks/boundaries
-
-
 
 
 
@@ -87,3 +71,36 @@ Collaborators must agree on the communication
     Didn't check for a response they could give
     Checked for a response they can't give
     misunderstood form of response
+
+
+
+
+Making mocks and stubs:
+- allows tests with things that aren't built yet
+- forces good design practices (less interdependancy)
+- fast
+
+Big problem with isolated tests: it isn't an accurate model of how things work
+
+Fixes:
+Contract & collaboration tests- test boundaries as well
+rspec-fire - make sure real method exists for mocks
+static typing - mock is subclass of real class with methods nulled so it throws typeerrors
+
+One elegant solution:
+https://www.destroyallsoftware.com/talks/boundaries
+
+Value in, value out !!!!
+No dependancies!!!!
+
+So instead, replace mocks and stubs with simple objects (hashes) in and out
+
+Value should be the boundary
+
+Core should have many paths, few dependancies
+	use isolated testing
+
+imparative parts -lots of dependancies, few paths
+	use integration testing
+
+separate states and smarts
