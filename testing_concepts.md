@@ -104,3 +104,31 @@ imparative parts -lots of dependancies, few paths
 	use integration testing
 
 separate states and smarts
+
+
+
+BDD vs TDD (explained)
+https://www.youtube.com/watch?v=mT8QDNNhExg
+
+
+
+Ruby Testing frameworks
+=======================
+
+https://en.wikipedia.org/wiki/Unit-testing_frameworks_for_Ruby_(programming_language)
+
+-   RSpec - BDD standard for Ruby
+-   Shoulda - Test::Unit but more readable. Super fast
+-   Cucumber - A clean BDD language
+
+
+Javascript Testing frameworks
+=============================
+
+-   Mocha/Expresso/should.js (TJ Holowaychuk) - style: should, expect, or assert (or all three with chai)
+-   JSUnit -> became Jasmine
+-   NodeUnit - uses built-in Assert
+-   Jasmine - RSpec-style
+-   Jezebel - continous Jasmine runner
+
+Also Concrete == free Codeship for Node
