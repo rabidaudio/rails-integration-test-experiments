@@ -46,9 +46,10 @@ end
 
 group :test do
   gem 'rspec-rails', '~> 2.0'
-  gem "capybara", "1.1.1"
-  gem "cucumber", "1.1.0"
+  gem "capybara", '~> 2.2'
+  gem "cucumber"
   gem 'cucumber-rails', :require => false
+  #gem 'nokogiri', '~> 1.5'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end
