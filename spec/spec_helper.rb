@@ -42,3 +42,8 @@ RSpec.configure do |config|
 
   config.include Capybara::DSL
 end
+
+
+def random_string(length = 10)
+    (0...length).map { (97 + rand(26)).chr }.join
+end
