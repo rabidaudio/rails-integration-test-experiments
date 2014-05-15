@@ -49,6 +49,7 @@ group :test do
   gem "capybara", '~> 2.2'
   gem "cucumber"
   gem 'cucumber-rails', :require => false
+  gem 'shoulda-matchers'
   #gem 'nokogiri', '~> 1.5'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
