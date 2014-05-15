@@ -9,5 +9,6 @@ FactoryGirl.define do
     bio                     { LoremIpsum.lorem_ipsum(paragraphs: 4) }
     password                "password"
     password_confirmation   "password"
+    active                  true
   end
 end

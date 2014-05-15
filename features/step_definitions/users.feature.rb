@@ -1,11 +1,14 @@
 Given(/^I have an account$/) do
-  pending # express the regexp above with the code you wish you had
+  @me = create(:user, active: true)
 end
 
 When(/^I log into the site$/) do
-  pending # express the regexp above with the code you wish you had
+  visit '/login'
+  fill_in "Username", with: @me.username
+  fill_in "Password", with: "password"
+  click_link "Sign in"
 end
 
 Then(/^I see my profile$/) do
-  pending # express the regexp above with the code you wish you had
+    expect(page).to have_content @me.bio
 end
