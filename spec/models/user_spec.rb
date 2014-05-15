@@ -1,12 +1,12 @@
 require 'spec_helper'
 
-
 describe User do
+
      before { @me = create(:user, active: true) }
 
     it { should validate_presence_of :username }
 
-    it { should allow_value("abc").for(:username) }
+    it { should allow_value("abc123").for(:username) }
 
     #it should not allow spaces
     it { should_not allow_value("bertrand russell").for(:username) }
@@ -18,6 +18,8 @@ describe User do
     it { should_not allow_value("aa").for(:username) }
 
     it { should have_secure_password }
+
+    it { should ensure_length_of(:password).is_at_least(6).is_at_most(50) }
 
     it { should validate_uniqueness_of(:username) }
 
