@@ -50,7 +50,8 @@ group :test do
   gem "cucumber"
   gem 'cucumber-rails', :require => false
   gem 'shoulda-matchers'
-  #gem 'nokogiri', '~> 1.5'
+  gem 'factory_girl_rails'
+  gem 'lorem_ipsum_amet'
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
 end

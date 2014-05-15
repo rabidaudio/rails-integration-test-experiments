@@ -41,9 +41,5 @@ RSpec.configure do |config|
   config.order = "random"
 
   config.include Capybara::DSL
-end
-
-
-def random_string(length = 10)
-    (0...length).map { (97 + rand(26)).chr }.join
+  config.include FactoryGirl::Syntax::Methods
 end

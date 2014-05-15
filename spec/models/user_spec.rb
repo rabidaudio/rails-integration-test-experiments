@@ -17,4 +17,7 @@ describe User do
     it { should_not allow_value("aa").for(:username) }
 
     it { should have_secure_password }
+
+    it { should validate_uniqueness_of(:username) }
+
 end
