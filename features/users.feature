@@ -4,6 +4,11 @@ Feature: Users
     I should have an account I can log into
 
     Scenario: I can log in
-        Given I have an account
+        Given I have a valid account
         When I log into the site
         Then I see my profile
+
+    Scenario: I can send my bio to friends
+        Given I have a valid account
+        When I send my bio to a friend
+        Then they receive a copy

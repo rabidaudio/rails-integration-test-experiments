@@ -1,4 +1,4 @@
-Given(/^I have an account$/) do
+Given(/^I have a valid account$/) do
   @me = create(:user, active: true)
 end
 
@@ -11,4 +11,13 @@ end
 
 Then(/^I see my profile$/) do
     expect(page).to have_content @me.bio
+end
+
+
+When(/^I send my bio to a friend$/) do
+  pending # express the regexp above with the code you wish you had
+end
+
+Then(/^they receive a copy$/) do
+  pending # express the regexp above with the code you wish you had
 end
